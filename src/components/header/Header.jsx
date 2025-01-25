@@ -4,11 +4,20 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <header className='header'>
-      <ul>
-        <Link to='/'>Home</Link>
-        <Link to='/donate'>Donate</Link>
-      </ul>
+    <header>
+      <div className="container">
+        <div className="header">
+          <img src="" alt="" />
+          <ul>
+            <Link to='/'>Главная</Link>
+            <a href="#about">О нас</a>
+            <a href="#events">Мероприятия</a>
+            <a href="#karta">Карта</a>
+            <a href="#rating">Рейтинг компаний</a>
+          </ul>
+          <button><Link to='donate'>Поддержать</Link></button>
+        </div>
+      </div>
     </header>
   )
 }
