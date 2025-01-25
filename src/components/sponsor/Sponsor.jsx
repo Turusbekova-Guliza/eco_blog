@@ -3,7 +3,9 @@ import './Sponsor.scss'
 
 function Sponsor() {
   return (
-    <div>Sponsor</div>
+    <div>
+      <h2 className='podderjka'>Нас поддерживают</h2>
+    </div>
   )
 }
 
