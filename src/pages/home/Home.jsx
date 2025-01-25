@@ -9,17 +9,15 @@ import Sponsor from '../../components/sponsor/Sponsor'
 
 function Home() {
   return (
-    <section className='home'>
-      <div className='container'>
-        <Hero />
-        <About />
-        <Active />
-        <Events />
-        <Karta />
-        <Sponsor />
-      </div>
-    </section>
+    <>
+      <Hero />
+      <About />
+      <Active />
+      <Events />
+      <Karta />
+      <Sponsor />
+    </>
   )
-}
+} 
 
 export default Home
