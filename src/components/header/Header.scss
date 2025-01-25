@@ -14,25 +14,32 @@
     margin: 0 auto;
 }
 
-header {
-    background-color: transparent !important;
-}
-
 .header {
     width: 100%;
     background-color: transparent !important;
     position: fixed;
-    transition: top 0.3s; /* Добавим плавную анимацию для скрытия/появления */
-    top: 0; /* Начальная позиция хедера */
+    transition: top 0.3s, color 0.3s; /* Плавный переход для скрытия/появления и изменения цвета */
+    top: 0;
 
     &.hidden {
-        top: -80px; /* Скрываем хедер, когда прокручиваем вниз */
+      top: -80px;
     }
 
     &.visible {
-        top: 0; /* Показываем хедер, когда прокручиваем вверх */
+      top: 0;
+    }
+
+    .header--light .header_ul a,
+    .header--light .header_btn a {
+      color: #fff !important;
+    }
+
+    .header--dark .header_ul a,
+    .header--dark .header_btn a {
+      color: #000 !important;
     }
 }
+
 
 .header_block {
     background-color: transparent !important;

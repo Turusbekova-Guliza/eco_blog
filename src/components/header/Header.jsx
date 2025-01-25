@@ -1,36 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 
 function Header() {
   const [isVisible, setIsVisible] = useState(true); // Состояние для видимости хедера
+  const location = useLocation(); // Получаем текущий путь
+  const isDonatePage = location.pathname === '/donate'; // Проверяем, находится ли пользователь на странице "Donate"
+
   let lastScrollY = 0; // Храним предыдущую позицию скролла
 
   // Функция для отслеживания скроллинга
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
-      // Если скроллим вниз — скрыть хедер
-      setIsVisible(false);
+      setIsVisible(false); // Скрываем хедер при скроллинге вниз
     } else {
-      // Если скроллим вверх — показать хедер
-      setIsVisible(true);
+      setIsVisible(true); // Показываем хедер при скроллинге вверх
     }
     lastScrollY = window.scrollY > 0 ? window.scrollY : 0; // Обновляем позицию скролла
   };
 
-  // Используем useEffect, чтобы добавить слушатель события
+  // Добавляем слушатель скроллинга
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll); // Добавляем слушатель скроллинга
-
-    // Убираем слушатель при размонтировании компонента
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <header className={`header ${isVisible ? 'visible' : 'hidden'}`}>
+    <header
+      className={`header ${isVisible ? 'visible' : 'hidden'} ${
+        isDonatePage ? 'header--dark' : 'header--light'
+      }`}
+    >
       <div className="container">
         <div className="header_block">
           <img className="logo" src={Logo} alt="Logo" />
@@ -42,7 +45,7 @@ function Header() {
             <a href="#rating">Рейтинг компаний</a>
           </ul>
           <button className="header_btn">
-            <Link to="donate">Поддержать</Link>
+            <Link to="/donate">Поддержать</Link>
           </button>
         </div>
       </div>

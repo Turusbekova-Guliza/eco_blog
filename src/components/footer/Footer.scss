@@ -1,0 +1,142 @@
+/* Стили для текста и заголовков в секциях Telegram бота */
+.text1 > h2 {
+    width: 502px;
+    height: 32px;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    color: black;
+  }
+  
+  .text1 > p {
+    margin-top: 30px;
+    margin-left: 860px;
+    width: 506px;
+    height: 100px;
+    font-weight: 900;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .text1 {
+    margin-left: -530px;
+    margin-top: 200px;
+  }
+  
+  .text2 > h2 {
+    width: 402px;
+    height: 32px;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    color: black;
+  }
+  
+  .text2 > p {
+    margin-top: 60px;
+    margin-left: 860px;
+    width: 506px;
+    height: 100px;
+    font-weight: 900;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .text2 {
+    margin-left: 540px;
+    margin-top: -60px;
+  }
+  
+  .Telphone {
+    margin-left: 770px;
+    margin-top: -560px;
+    position: relative;
+    z-index: 1; /* Этот элемент будет выше */
+  }
+  
+  /* Основные стили для футера */
+  .footer {
+    background-color: #314222; /* Темно-зеленый цвет */
+    color: #FFFFFF;
+    margin-top: -300px;
+    height: 350px;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 2; /* Этот элемент будет выше */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    width: 200px;
+    flex: 1;
+    margin: 0 15px;
+    color: #FFFFFF;
+  }
+  
+  .footer-section h3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    color: #FFFFFF;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .footer-section ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social-icons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-social-icons a {  
+    margin: 0 10px;
+  }
+  
+  .footer-social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Для светлых иконок */
+    transition: transform 0.3s;
+  }
+  
+  .footer-social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Адаптивные стили */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 20px;
+    }
+  }
+  
