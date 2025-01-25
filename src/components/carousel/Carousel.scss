@@ -1,0 +1,48 @@
+.carousel-container {
+  padding-top: 100px;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+
+  .carousel-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+
+  .carousel-slide {
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+
+    .carousel-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .carousel-content {
+      margin-top: 0.5rem;
+      .carousel-item-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .carousel-item-description {
+        font-size: 1rem;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400px;
+      }
+    }
+  }
+}

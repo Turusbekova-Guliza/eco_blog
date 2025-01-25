@@ -1,10 +1,7 @@
-import React from 'react'
-import './Karta.scss'
+import "./Karta.scss";
 
 function Karta() {
-  return (
-    <div>Karta</div>
-  )
+  return <div>Karta</div>;
 }
 
-export default Karta
+export default Karta;
