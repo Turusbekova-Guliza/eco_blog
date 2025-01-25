@@ -1,0 +1,49 @@
+.event-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f7e9;
+  border-radius: 10px;
+
+  .event-title {
+    text-align: center;
+    font-size: 34px;
+    color: #587637;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600px;
+  }
+
+  .event-slide {
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .event-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .event-content {
+      .event-item-title {
+        font-size: 18px;
+        color: #000000;
+        margin-bottom: 10px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600px;
+      }
+
+      .event-item-description {
+        font-size: 14px;
+        color: #000000;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400px;
+      }
+    }
+  }
+}
