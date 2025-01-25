@@ -1,8 +1,7 @@
-import ".//About.scss";
-
 import planetImg from "../../assets/planet.jpg";
 import biodiversityImg from "../../assets/tree.jpg";
 import energyImg from "../../assets/light.jpg";
+import ".//About.scss";
 
 const About = () => {
   const cards = [

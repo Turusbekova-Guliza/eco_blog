@@ -7,14 +7,13 @@ import Sponsor from "../../components/sponsor/Sponsor";
 
 function Home() {
   return (
-    <section className="home">
+    <>
       <Hero />
       <About />
       <Events />
       <Karta />
       <Sponsor />
-    </section>
+    </>
   );
 }
-
 export default Home;
