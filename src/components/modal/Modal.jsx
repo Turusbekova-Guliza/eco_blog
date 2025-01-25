@@ -1,4 +1,4 @@
-import ".//Model.scss";
+import "./Model.scss";
 import { useState } from "react";
 
 const Modal = ({ showModal, closeModalHandler }) => {
@@ -8,18 +8,36 @@ const Modal = ({ showModal, closeModalHandler }) => {
     phone: "",
     message: "",
   });
+  const [errorMessage, setErrorMessage] = useState(""); // To track error messages
+  const [isSubmitted, setIsSubmitted] = useState(false); // To handle submission state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    setErrorMessage(""); // Clear error when the user starts typing
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if all fields are filled
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
+      setErrorMessage("Пожалуйста, заполните все поля."); // Show error message
+      return;
+    }
+
+    // If all fields are filled, proceed with form submission
     console.log("Form Submitted:", formData);
-    alert("Форма успешно отправлена!");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-    closeModalHandler();
+    setIsSubmitted(true); // Mark form as submitted
+    setFormData({ name: "", email: "", phone: "", message: "" }); // Clear form
+    setTimeout(() => {
+      closeModalHandler(); // Close modal after a short delay
+    }, 1000);
   };
 
   if (!showModal) return null;
@@ -80,6 +98,13 @@ const Modal = ({ showModal, closeModalHandler }) => {
               required
             ></textarea>
           </div>
+
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+
+          {isSubmitted && (
+            <p className="success-message">Ваша анкета успешно отправлена!</p>
+          )}
+
           <button type="submit" className="modal-join-btn">
             Отправить
           </button>
