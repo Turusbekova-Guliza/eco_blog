@@ -1,16 +1,22 @@
 import React from 'react'
 import './Home.scss'
+import Hero from '../../components/hero/Hero'
+import About from '../../components/about/About'
+import Active from '../../components/active/Active'
+import Events from '../../components/events/Events'
+import Karta from '../../components/Karta/Karta'
+import Sponsor from '../../components/sponsor/Sponsor'
 
 function Home() {
   return (
     <section className='home'>
       <div className='container'>
-        <div className='hero'>hero</div>
-        <div className="about">about</div>
-        <div className="active">active</div>
-        <div className="events">events</div>
-        <div className="karta">karta</div>
-        <div className="sponsor">sponsor</div>
+        <Hero />
+        <About />
+        <Active />
+        <Events />
+        <Karta />
+        <Sponsor />
       </div>
     </section>
   )
