@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    text-decoration: none;
 }
 
 .container {
@@ -10,6 +13,59 @@
     margin: 0 auto;
 }
 
-header {
+.header {
+    width: 100%;
     background-color: transparent !important;
+    position: fixed;
+    transition: top 0.3s; /* Добавим плавную анимацию для скрытия/появления */
+    top: 0; /* Начальная позиция хедера */
+
+    &.hidden {
+        top: -80px; /* Скрываем хедер, когда прокручиваем вниз */
+    }
+
+    &.visible {
+        top: 0; /* Показываем хедер, когда прокручиваем вверх */
+    }
+}
+
+.header_block {
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header_ul {
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            color: #fff;
+            font-family: 'Montserrat';
+            font-weight: 600;
+        }
+    }
+
+    .header_btn {
+        background-color: #2BAC8C;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border: none;
+
+        a {
+            color: #fff;
+            font-family: 'Montserrat';
+            font-size: 17px;
+            font-weight: 300;
+        }
+    }
 }
