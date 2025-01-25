@@ -1,0 +1,40 @@
+.eco-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f4f7e9;
+  border: 1px solid #b2d4d0;
+  border-radius: 10px;
+
+  .eco-card {
+    text-align: center;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    &__icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    &__text {
+      font-size: 16px;
+      color: #7f8c8d;
+      line-height: 1.6;
+    }
+  }
+}

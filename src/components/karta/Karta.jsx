@@ -1,5 +1,4 @@
-import React from 'react'
-import './Karta.scss'
+import "./Karta.scss";
 
 function Karta() {
   return (
@@ -21,4 +20,4 @@ function Karta() {
   )
 }
 
-export default Karta
+export default Karta;
